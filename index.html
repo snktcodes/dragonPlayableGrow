@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="ad.orientation" content="portrait">
+    <meta name="ad.size" content="width=320,height=480">
+    <title>Dragon PlayableAD/</title>
+
+
+    <style>
+        /*  #gameDiv {
+            overflow: hidden !important;
+        } */
+        
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: red;
+            background-image: linear-gradient(-45deg, #C02303, #2E91B8);
+            font-family: 'font2';
+        }
+        
+        html,
+        body {
+            height: 100%;
+            overflow: hidden !important;
+        }
+        
+        #gameDiv {
+            position: absolute !important;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: auto !important;
+        }
+        
+        #btnCTA {
+            width: 100%;
+            height: 40%;
+            z-index: -1;
+            background: transparent;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            border: none;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://tpc.googlesyndication.com/pagead/gadgets/html5/api/exitapi.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="containerr">
+        <div class="progress">
+            <div class="bar shadow overlap"></div>
+        </div>
+    </div>
+
+
+    <div id="gameDiv"></div>
+
+    <button id="btnCTA" onclick="fnctabtn()"></button>
+
+    <script>
+        function fnctabtn() {
+            console.log("TTTTT")
+            var userAgent = navigator.userAgent || navigator.vendor;
+            var url = "https://apps.apple.com/us/app/dragonvale/id440045374";
+            var android =
+                "https://play.google.com/store/apps/details?id=com.backflipstudios.android.dragonvale&hl=en&gl=US";
+            if (/android/i.test(userAgent)) {
+                url = android;
+            }
+            ExitApi.exit();
+            window.open(url);
+        }
+    </script>
+<script type="text/javascript" src="bundle.min.js"></script></body>
+
+
+</html>
